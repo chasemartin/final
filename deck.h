@@ -15,6 +15,7 @@ int nextcardidx;
 public:
         Card drawCard();
         Deck();
+        multiDeck();
         void shuffleDeck();
 };
 #endif
