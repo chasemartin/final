@@ -36,6 +36,13 @@ thrust::host_vector<int> deck(52);
         deck[40]=10;  deck[41]=10;  deck[42]=10;  deck[43]=10;
         deck[44]=10;  deck[45]=10;  deck[46]=10;  deck[47]=10;
         deck[48]=1;   deck[49]=1;   deck[50]=1;   deck[51]=1;
+        
+Deck::multiDeck(){
+	for (x=0; x<1000; x++){
+		thrust::device_vector <int> d_deck[x] = deck;
+	}
+		
+}
        
 Deck::drawCard(){
 	nextcardidx = 0;
