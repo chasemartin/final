@@ -11,7 +11,6 @@ test: gtest.cpp
   $(CC) -o gtest gtest.cpp $(LIBS)
 
 install: main test
-  $(CC)
 
 test: test
   srun ./test
