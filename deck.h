@@ -1,20 +1,25 @@
-#ifndef DECK_H
-#define DECK_H
-#define __both__ 
+#ifndef __DECK_H_INCLUDED__
+#define DECK_H_INLCLUDED__
+
+#include <thrust/host_vector.h>
+#include <thrust/device_vector.h>
+#include <thrust/swap.h>
+#include <time.h>
 
 
 class Deck {
-    public:
-       __both__ Deck();
-       __both__ Card dealOneCard();
-       __both__ void shuffle();
-        
-    private:
-        Card _cards[52];
-        int  _nextCardIndex;
-};    
 
+thrust::host_vector<Card> cards;
+int nextcardidx;
+
+public:
+        Card drawCard();
+        Deck();
+        void shuffleDeck();
+};
 #endif
+
+
 	 
 
 
