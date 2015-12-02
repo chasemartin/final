@@ -35,7 +35,7 @@ thrust::host_vector<int> deck(52);
         deck[36]=10;  deck[37]=10;  deck[38]=10;  deck[39]=10;
         deck[40]=10;  deck[41]=10;  deck[42]=10;  deck[43]=10;
         deck[44]=10;  deck[45]=10;  deck[46]=10;  deck[47]=10;
-        deck[48]=11;  deck[49]=11;  deck[50]=11;  deck[51]=11;
+        deck[48]=1;   deck[49]=1;   deck[50]=1;   deck[51]=1;
        
 Deck::drawCard(){
 	nextcardidx = 0;
