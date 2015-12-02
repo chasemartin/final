@@ -1,34 +1,48 @@
-#include <cassert>
-#include <cstdlib>
-#include <string>
-#include <algorithm>
+#include<iostream>
+#include<thrust/host_vector.h>
+#include<thrust/device_vector.h>
+#include<thrust/swap.h>
 
-#include "card.h"
 #include "deck.h"
 
-//=========================================== Constructor
-Deck::Deck() {
-    // Initialize the array to the ints 0-51
-        for (int i=0; i<52; i++) {
-            _cards[i] = Card(i);
-        }
-        shuffle();
-        _nextCardIndex = 0;  // index of next available card
-        }    
+#define NUM_CARDS 52
+int x;
+int nextcardidx;
 
-//================================================== deal
-//  Action    : Returns random Card.
-Card Deck::dealOneCard() {
-	assert(_nextCardIndex >= 0 && _nextCardIndex<52);
-        return _cards[_nextCardIndex++];
+void Deck::shuffleDeck(){
+        thrust::Device_vector<int> d_deck = deck;
+        	for(x=0; x<105; x++){
+        		int pos1;
+        		int pos2;
+       			pos1 = rand()%45;
+			pos2 = pos1 + 1;
+                thrust::swap_ranges(    d_deck.begin(),
+                                        d_deck.begin() + pos1,
+                                        d_deck.begin() + pos2);
 }
-//================================================ shuffle
-//  Action    : Shuffles Deck.
-//  Returns   : none.
-void Deck::shuffle() {
-	// Shuffle by exchanging each element randomly
-	for (int i=0; i<(52-1); i++) {
-          int randnum = i + (rand() % (52-i));
-          swap(_cards[i], _cards[randnum]);
-        }
-        _nextCardIndex =0;                                                             }
+
+Deck::Deck(){
+thrust::host_vector<int> deck(52);
+        deck[0]=2;    deck[1]=2;    deck[2]=2;    deck[3]=2;
+        deck[4]=3;    deck[5]=3;    deck[6]=3;    deck[7]=3;
+        deck[8]=4;    deck[9]=4;    deck[10]=4;   deck[11]=4;
+        deck[12]=5;   deck[13]=5;   deck[14]=5;   deck[15]=5;
+        deck[16]=6;   deck[17]=6;   deck[18]=6;   deck[19]=6;
+        deck[20]=7;   deck[21]=7;   deck[22]=7;   deck[23]=7;
+        deck[24]=8;   deck[25]=8;   deck[26]=8;   deck[27]=8;
+        deck[28]=9;   deck[29]=9;   deck[30]=9;   deck[31]=9;
+        deck[32]=10;  deck[33]=10;  deck[34]=10;  deck[35]=10;
+        deck[36]=10;  deck[37]=10;  deck[38]=10;  deck[39]=10;
+        deck[40]=10;  deck[41]=10;  deck[42]=10;  deck[43]=10;
+        deck[44]=10;  deck[45]=10;  deck[46]=10;  deck[47]=10;
+        deck[48]=11;  deck[49]=11;  deck[50]=11;  deck[51]=11;
+       
+Deck::drawCard(){
+	nextcardidx = 0;
+			if (nextcardidx<0 || nextcardidx > 52);
+				return deck[nextcardidx++];
+}
+
+
+
+Card Deck::drawCard(){
