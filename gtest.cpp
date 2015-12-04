@@ -18,8 +18,8 @@ TEST(Deck, Shuffle){
 }
 
 TEST(Player, Win){
-  int p.bestscore = 13
-  int computer.bestscore = 21
+  int p.bestscore = 13;
+  int computer.bestscore = 21;
     ASSERT_TRUE(playerWon(p.bestscore>computer.bestscore));
     ASSERT_FALSE(playerWon(p.bestscore<computer.bestscore));
 }
