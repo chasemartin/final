@@ -5,11 +5,10 @@
 
 #include "deck.h"
 
-#define NUM_CARDS 52
 int x;
 int nextcardidx;
 
-void Deck::shuffleDeck(){
+void Deck::shuffleDeck(){ //
         thrust::Device_vector<int> d_deck = deck;
         	for(x=0; x<105; x++){
         		int pos1;
