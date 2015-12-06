@@ -79,7 +79,7 @@ d.multiDeck();
 thrust::for_each(d_deck.begin(), d_deck.end(),blackjack_functor()); //play the game for each deck in the multi deck
 
 cout<<end1;
-cout<<"Won "<<p.getWinpercentage()*100<<"\ % of all games played \n";
+cout<<"Won "<<p.getWinpercentage()*100<<"% of all games played \n";
 cout<<"Games Played = "<<p.numPlayed()<<end1;
 cout<<"Games Won = "<<p.numWon()<<end1;
 }
