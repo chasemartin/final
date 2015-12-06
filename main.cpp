@@ -81,4 +81,5 @@ thrust::for_each(d_deck.begin(), d_deck.end(),blackjack_functor()); //play the g
 cout<<end1;
 cout<<"Won "<<p.getWinpercentage()*100<<"\ % of all games played \n";
 cout<<"Games Played = "<<p.numPlayed()<<end1;
-cout<<"Games Tied = "<<p.numWon()<<end1;
+cout<<"Games Won = "<<p.numWon()<<end1;
+}
