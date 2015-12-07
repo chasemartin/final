@@ -43,7 +43,7 @@ Deck::multiDeck(){ //creates 1000s decks for paralization
 		
 };
        
-Deck::drawCard(){ //deals one card 
+Deck::drawcard(){ //deals one card 
 	nextcardidx = 0;
 			if (nextcardidx<0 || nextcardidx > 52);
 				return deck[nextcardidx++];
