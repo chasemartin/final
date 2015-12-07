@@ -1,5 +1,6 @@
 //*Class Player*
 #include "player.h"
+#include <iostream>
 #include <thrust/host_vector.h>
 
 Player::Player()	//initialize class variables
