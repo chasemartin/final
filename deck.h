@@ -11,10 +11,10 @@
 class Deck 
 {
 
-int nextcardidx;
-
+	int nextcardidx;
+	int x;
 public:
-        Card drawCard();
+        drawCard();
         Deck();
         multiDeck();
         void shuffleDeck();
