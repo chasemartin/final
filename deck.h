@@ -14,7 +14,7 @@ class Deck
 	int nextcardidx;
 	int x;
 public:
-        drawCard();
+        drawcard();
         Deck();
         multiDeck();
         void shuffleDeck();
