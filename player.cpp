@@ -47,3 +47,17 @@ int Player::numTied()
 	return gamesTied;
 };
 
+void Player::won()
+{
+	gamesWon++;
+	gamesPlayed++;
+};
+void Player::lost()
+{
+	gamesPlayed++;
+};
+void Player::tie()
+{
+	gamesTied++;
+	gamesPlayed++;
+};
