@@ -9,9 +9,7 @@
 //========================
 //included dependencies
 
-#include <vector>
 #include <thrust/host_vector.h>
-#include <string>
 #include "deck.h"
 #include "card.h"
 #include "participant.h"
