@@ -8,7 +8,6 @@
 
 class Deck 
 {
-
 	int nextcardidx;
 	int x;
 public:
