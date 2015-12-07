@@ -18,7 +18,7 @@ void Deck::shuffleDeck(){ // function to shuffle deck
                 thrust::swap_ranges(    d_deck.begin(),
                                         d_deck.begin() + pos1,
                                         d_deck.begin() + pos2);
-}
+};
 
 Deck::Deck(){ //initilizes a vector for deck
 thrust::host_vector<int> deck(52);
@@ -39,13 +39,13 @@ thrust::host_vector<int> deck(52);
 Deck::multiDeck(){ //creates 1000s decks for paralization
 	for (x=0; x<1000; x++){
 		thrust::device_vector <int> d_deck[x] = deck;
-	}
+	};
 		
-}
+};
        
 Deck::drawCard(){ //deals one card 
 	nextcardidx = 0;
 			if (nextcardidx<0 || nextcardidx > 52);
 				return deck[nextcardidx++];
-}
+};
 
