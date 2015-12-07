@@ -2,6 +2,8 @@
 #include "participant.h"
 #include <iostream>
 #include "card.h"
+#include "deck.h"
+#include <thrust/host_vector.h>
 
 void Participant::add(Card c)   //add card to hand
 {
