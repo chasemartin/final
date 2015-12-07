@@ -1,4 +1,4 @@
-//*Class Participant (Either Deaker or Player)*
+/*Class Participant (Either Deaker or Player)*
 //===================================
 //include guard
 
@@ -17,14 +17,11 @@
 class Participant
 {
 protected:
-	std::vector<Card> hand; //vector containing cards in hand of participant
-	int non_ace_total;      //total of non ace cards in hand
-	int num_aces;           //number of aces in hand
+        thrust::host_vector<Card> hand; //vector containing cards in hand of participant
+        int non_ace_total;      //total of non ace cards in hand
+        int num_aces;           //number of aces in hand
 public:
-	void printHand();       //prints cards at hand
-	void add(Card c); 	//add card to hand
-	int bestscore();	//returns best possible score
-	void printScore();	//prints score of the participant
-	void clearHand();	//remove all cards from hand
+        void add(Card c);       //add card to hand
+        int bestscore();        //returns best possible score
 };
 #endif //__PARTICIPANT_H_INCLUDED__
