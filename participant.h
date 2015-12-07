@@ -9,7 +9,8 @@
 //included dependencies
 
 #include "card.h"
-#include <vector>
+#include "deck.h"
+#include <thrust/host_vector.h>
 
 //==============================
 //actual class
