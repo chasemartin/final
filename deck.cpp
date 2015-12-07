@@ -9,7 +9,7 @@ int x;
 int nextcardidx;
 
 void Deck::shuffleDeck(){ // function to shuffle deck
-        thrust::Device_vector<int> d_deck = deck;
+        thrust::device_vector<int> d_deck = deck;
         	for(x=0; x<105; x++){
         		int pos1; // dictates end of fisrt range
         		int pos2; //dictates beginging of the second range
