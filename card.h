@@ -6,7 +6,7 @@
 
 class Card : public Deck //card inherits from Deck
 {
-  thrust::host_vector<int> deck(52);
+  thrust::host_vector<Card> deck(52); //vector containing cards in the deck
   int value;
   public:
     Card(int c);    //c is the value of the card from the deck
