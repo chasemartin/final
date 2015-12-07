@@ -2,6 +2,7 @@
 #define __CARD_H_INCLUDED__
 
 #include "deck.h"
+#include <thrust/host_vector.h>
 
 class Card
 {
