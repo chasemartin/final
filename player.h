@@ -23,9 +23,12 @@ class Player: public Participant //Player inherits from participant
 	int gamesTied;
 
 	public:
-	double getWinpercentage(); //returns percent of games won
-
-	Player();
+	bool hit_or_stay(); //retruns true if player hits else false
+	double getWinpercentage(); //returns percentage of games won
+	void won(); //called when player wins
+	void lost(); //called when player loses
+	void tie(); //called when round tied
+	Player(); //constructor
 	int numPlayed(); //returns number of games played
 	int numWon();   //returns number of games won
 	int numTied();  //returns number of games tied
