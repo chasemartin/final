@@ -1,5 +1,7 @@
 #include "card.h"
+#include "deck.h"
 #include <iostream>
+#include <thrust/host_vector.h>
 
 Deck d;
 
