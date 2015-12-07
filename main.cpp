@@ -33,12 +33,12 @@ while(p.hit_or_stay())  //players turn
 {
         p.add(d.drawCard());
 
-}
+};
 
 if (p.bestscore()>21)   //if player exceeded a total of 21
 {
         p.lost();       //player lost
-}
+};
 
 else                    //dealers turn
 {
@@ -46,29 +46,29 @@ else                    //dealers turn
         while(computer.hit_or_stay())
         {
                 computer.add(d.drawCard());
-        }
+        };
         if(computer.bestscore()>21)
         {
                 p.won();
-        }
+        };
         else
         {
                 if(p.bestscore() > computer.bestscore())
                 {
                         p.won();
-                }
+                };
                 else if(p.bestscore() < computer.bestscore())
                 {
                         p.lost();
-                }
+                };
                 else
                 {
                         p.tie();
-                }
-        }
-}
-}
-}
+                };
+        };
+};
+};
+};
 
 int main(void)
 
