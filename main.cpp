@@ -9,10 +9,6 @@
 #include "dealer.h"
 #include <unistd.h>
 
-Player p;
-Deck d;
-Dealer computer;
-
 struct blackjack_functor
 {
 
@@ -68,6 +64,9 @@ else                    //dealers turn
 };
 
 int main(void)
+Player p;
+Deck d;
+Dealer computer;
 
 {
 d.Deck();               //call multi deck and deck class
