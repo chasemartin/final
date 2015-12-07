@@ -1,4 +1,4 @@
-/*Class Participant (Either Deaker or Player)*
+//*Class Participant (Either Deaker or Player)*
 //===================================
 //include guard
 
