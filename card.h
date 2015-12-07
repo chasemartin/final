@@ -2,7 +2,7 @@
 #define __CARD_H_INCLUDED__
 
 class Card{
-  publuc:
+  public:
     Card(int c);
     int getValue();
 };
