@@ -4,6 +4,7 @@
 #include <thrust/for_each.h>
 #include <thrust/execution_policy.h>
 
+#inlcude "card.h"
 #include "deck.h"
 #include "player.h"
 #include "dealer.h"
@@ -17,15 +18,15 @@ d.shuffleDeck();
 
 // Initial Deal of 2 cards to both Dealer and Player
 
-computer.add(d.drawCard());
-computer.add(d.drawCard());
+computer.add(d.drawcard());
+computer.add(d.drawcard());
 
-p.add(d.drawCard());
-p.add(d.drawCard());
+p.add(d.drawcard());
+p.add(d.drawcard());
 
 while(p.hit_or_stay())  //players turn
 {
-        p.add(d.drawCard());
+        p.add(d.drawcard());
 
 };
 
@@ -39,7 +40,7 @@ else                    //dealers turn
 
         while(computer.hit_or_stay())
         {
-                computer.add(d.drawCard());
+                computer.add(d.drawcard());
         };
         if(computer.bestscore()>21)
         {
