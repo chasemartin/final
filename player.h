@@ -1,37 +1,35 @@
-//*Class Player*
-//=======================
-//include guard
-
-#ifndef __PLAYER_H_INCLUDED__
-#define __PLAYER_H_INCLUDED__
-
-//========================
-//included dependencies
-
-#include <vector>
-#include <string>
-#include "card.h"
+//*Class Participant*
 #include "participant.h"
+#include <iostream>
+#include "card.h"
 
-//=======================
-//the actual class
-
-class Player: public Participant //Player inherits from participant
+void Participant::add(Card c)   //add card to hand
 {
-	int gamesPlayed;
-	int gamesWon;
-	int gamesTied;
-
-	public:
-	bool hit_or_stay(); //retruns true if player hits else false
-	double getWinpercentage(); //returns percentage of games won
-	void won(); //called when player wins
-	void lost(); //called when player loses
-	void tie(); //called when round tied
-	Player(); //constructor
-	int numPlayed(); //returns number of games played
-	int numWon();   //returns number of games won
-	int numTied();  //returns number of games tied
-};
-
-#endif //__PLAYER_H_INCLUDED__
+        if(c.getValue()==1)     //maintain correct non ace total and ace count
+        {
+                num_aces++;
+        }
+        else if(c.getValue()>==10)
+        {
+                non_ace_total+=10;
+        }
+        else
+        {
+                non_ace_total+=c.getValue();
+        }
+}
+int Participant::bestscore()
+{
+        int score_high;
+        int score_low;
+        if (num_aces==0)
+        {
+                return non_ace_total;   //if no aces in hand
+        }
+        else
+        {
+                score_low = non_ace_total + num_aces;   //lower possible score considered
+                score_high = non_ace_total + 10 + num_aces;     //higher possible score considered
+                return score_high < 22 ? score_high:score_low; //returns best score below 22
+        }
+}
