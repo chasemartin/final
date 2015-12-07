@@ -17,7 +17,6 @@
 class Participant
 {
 protected:
-        thrust::host_vector<Card> hand; //vector containing cards in hand of participant
         int non_ace_total;      //total of non ace cards in hand
         int num_aces;           //number of aces in hand
 public:
