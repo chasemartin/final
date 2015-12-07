@@ -19,7 +19,7 @@ void Deck::shuffleDeck(){ // function to shuffle deck
                                         d_deck.begin() + pos1,
                                         d_deck.begin() + pos2);
 };
-
+};
 Deck::Deck(){ //initilizes a vector for deck
 thrust::host_vector<int> deck(52);
         deck[0]=2;    deck[1]=2;    deck[2]=2;    deck[3]=2;
@@ -35,7 +35,7 @@ thrust::host_vector<int> deck(52);
         deck[40]=10;  deck[41]=10;  deck[42]=10;  deck[43]=10;
         deck[44]=10;  deck[45]=10;  deck[46]=10;  deck[47]=10;
         deck[48]=1;   deck[49]=1;   deck[50]=1;   deck[51]=1;
-        
+};        
 Deck::multiDeck(){ //creates 1000s decks for paralization
 	for (x=0; x<1000; x++){
 		thrust::device_vector <int> d_deck[x] = deck;
