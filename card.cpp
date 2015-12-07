@@ -3,8 +3,8 @@
 
 Card::Card(int c){
   value=c;
-  }
+  };
   
 int Card:: getValue(){
   return value;
-  }
+  };
