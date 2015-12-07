@@ -10,6 +10,7 @@
 //included dependencies
 
 #include <thrust/host_vector.h>
+#include <iostream>
 #include "deck.h"
 #include "card.h"
 #include "participant.h"
