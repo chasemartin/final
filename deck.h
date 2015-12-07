@@ -11,7 +11,6 @@
 class Deck 
 {
 
-thrust::host_vector<Card> cards;
 int nextcardidx;
 
 public:
