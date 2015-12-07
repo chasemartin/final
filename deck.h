@@ -5,8 +5,6 @@
 #include <thrust/device_vector.h>
 #include <thrust/swap.h>
 #include <time.h>
-#include "card.h"
-
 
 class Deck 
 {
