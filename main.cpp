@@ -15,8 +15,6 @@ Dealer computer;
 
 struct blackjack_functor
 {
-do
-{
 
 //Shuffle decks seperately so they are unique shuffles
 d.shuffleDeck();
@@ -66,7 +64,6 @@ else                    //dealers turn
                         p.tie();
                 };
         };
-};
 };
 };
 
