@@ -28,7 +28,7 @@ public:
         double getWinpercentage(); //returns percentage of games won
         void won();     //called when player wins
         void lost();    //called when player loses
-        void tie()      //called when round tied
+        void tie();      //called when round tied
         Player();       //constructor
         int numPlayed(); //returns number of games played
         int numWon();   //returns number of games won
